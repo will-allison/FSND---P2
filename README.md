@@ -17,9 +17,7 @@ Create a SQL Database and import the tournament.sql file.
 Function details listed below:
 
 def connect():
-	"""Connect to the PostgreSQL database.  Returns a database connection."""
-	return psycopg2.connect("dbname=tournament")
-
+	`"""Connect to the PostgreSQL database.  Returns a database connection."""`
 
 def deleteMatches():
 	"""Remove all the match records from the database."""
