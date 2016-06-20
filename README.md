@@ -8,33 +8,32 @@ This program will need [Python 2.7](https://www.python.org/downloads/) to run an
 
 ## Contents
 Three files are included in this program:
-
 1. **tournament.py** - This file contains all the functions necessary to create and maintain a tournament.
 2. **tournament.sql** - This file creates the tables and views necessary for this program in the SQL Database
 3. **tournament_test.py** - This file tests **tournament.py** to make sure all the functions are set up correctly.
 
 ## Usage
 Create a SQL Database and import the tournament.sql file.
+
+Run "python tournament_test.py" to make sure all functions are set up correctly.
+
 Function details listed below:
 
 def connect():
-
 	"""Connect to the PostgreSQL database.  Returns a database connection."""
+	return psycopg2.connect("dbname=tournament")
+
 
 def deleteMatches():
-
 	"""Remove all the match records from the database."""
 
 def deletePlayers():
-
 	"""Remove all the player records from the database."""
 
 def countPlayers():
-
 	"""Returns the number of players currently registered."""
 	
 def registerPlayer(name):
-
 	"""Adds a player to the tournament database.
   
 	The database assigns a unique serial id number for the player.  (This
@@ -46,7 +45,6 @@ def registerPlayer(name):
 
 
 def playerStandings():
-
 	"""Returns a list of the players and their win records, sorted by wins.
 
 	The first entry in the list should be the player in first place, or a player
@@ -61,7 +59,6 @@ def playerStandings():
 	"""
 
 def reportMatch(winner, loser):
-
 	"""Records the outcome of a single match between two players.
 
 	Args:
@@ -71,7 +68,6 @@ def reportMatch(winner, loser):
  
  
 def swissPairings():
-
 	"""Returns a list of pairs of players for the next round of a match.
  
 	Assuming that there are an even number of players registered, each player

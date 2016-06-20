@@ -7,8 +7,9 @@
 -- these lines here.
 
 CREATE TABLE matches (
-	winner integer,
-	loser integer
+	id serial PRIMARY KEY,
+	winner integer REFERENCES players(id),
+	loser integer REFERENCES players(id)
 );
 
 CREATE TABLE players (
