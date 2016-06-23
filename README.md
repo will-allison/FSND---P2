@@ -13,7 +13,11 @@ Three files are included in this program:
 3. **tournament_test.py** - This file tests **tournament.py** to make sure all the functions are set up correctly.
 
 ## Usage
-Create a SQL Database and import the tournament.sql file.
+First, create a SQL Database for the tournament by doing the following:
+1. Launch the command line on a machine with PostgreSQL installed.
+2. Run the command 'CREATE DATABASE tournament;' to create the database
+3. Run the command '\c tournament' to connect to your newly created database.
+4. Run the command '\i tournament.sql' to import the database schema.
 
 Run "python tournament_test.py" to make sure all functions are set up correctly.
 
