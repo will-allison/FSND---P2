@@ -6,16 +6,17 @@
 -- You can write comments in this file by starting them with two dashes, like
 -- these lines here.
 
+CREATE TABLE players (
+	id serial PRIMARY KEY,
+	name text
+);
+
 CREATE TABLE matches (
 	id serial PRIMARY KEY,
 	winner integer REFERENCES players(id),
 	loser integer REFERENCES players(id)
 );
 
-CREATE TABLE players (
-	id serial PRIMARY KEY,
-	name text
-);
 
 CREATE view total_matches as select players.id,players.name,count(matches.winner) as wins from players left join matches on matches.winner = players.id	group by players.id order by wins desc;
 
