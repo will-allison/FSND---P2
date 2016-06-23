@@ -15,11 +15,12 @@ Three files are included in this program:
 ## Usage
 First, create a SQL Database for the tournament by doing the following:
 1. Launch the command line on a machine with PostgreSQL installed.
-2. Run the command 'CREATE DATABASE tournament;' to create the database
-3. Run the command '\c tournament' to connect to your newly created database.
-4. Run the command '\i tournament.sql' to import the database schema.
-
-Run "python tournament_test.py" to make sure all functions are set up correctly.
+2. Run the command 'cd /vagrant/tournamanet' to navigate to the project folder.
+3. Run the command 'psql' to go to PostgreSQL
+4. Run the command 'CREATE DATABASE tournament;' to create the database
+5. Run the command '\c tournament' to connect to your newly created database.
+6. Run the command '\i tournament.sql' to import the database schema.
+7. Run "python tournament_test.py" to make sure all functions are set up correctly.
 
 Function details listed below:
 
